@@ -2,15 +2,15 @@ package com.example.project;
 
 public class StringLoopsRunner {
     public static void main(String[] args) {
-         StringLoops loops = new StringLoops();
-  System.out.println(loops.countString("an", "canned beans and bananas"));
-  System.out.println(loops.countString("tat", "Ratatattat"));
-  System.out.println(loops.countString("lower", "sunflower"));
-  System.out.println(loops.countString("haha", "Hahahahaha"));
-  System.out.println(loops.countString("rain", "rain drain pain train"));
-  System.out.println(loops.countString("was", "I was about to call you"));
-  System.out.println(loops.countString("but", "I was about to call you"));
-  System.out.println(loops.countString("i", "iiiit's supercalifragilisticexpialidociousi"));
+        StringLoops loops = new StringLoops();
+  loops.commaSeparated(0, 5);
+  loops.commaSeparated(-3, 2);
+  loops.commaSeparated(8, 1);
+  loops.commaSeparated(-4, -10);
+  loops.commaSeparated(4, 4);
+  loops.commaSeparated(0, 0);
+  loops.commaSeparated(0, 1);
+  loops.commaSeparated(-3, 12);
 
 
     }

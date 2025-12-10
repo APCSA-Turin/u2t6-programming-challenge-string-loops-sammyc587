@@ -101,8 +101,8 @@ public class StringLoops {
    }
 
    public int countString(String searchString, String origString) {
-    String tempString = origString.toLowerCase();
-    String tempSearch = searchString.toLowerCase();
+   String tempString = origString;
+    String tempSearch = searchString;
     int count = 0;
     int index = 0;
     while((index = tempString.indexOf(tempSearch, index)) != -1){
@@ -113,21 +113,44 @@ public class StringLoops {
    }
 
    public String removeString(String searchString, String origString) {
-    
-       return "";
+    return origString.replace(searchString, "");
    }
 
 
    public void commaSeparated(int fromNum, int toNum) { //the tests will compare your printed output (not a returned string)
-       System.out.println();
-   }
+    if (fromNum == toNum){
+        System.out.print(fromNum);
+    }
+    if (toNum > fromNum){
+    for (int i = fromNum; i <= toNum; i++){
+                System.out.print(i);
+                if (i != toNum){
+                    System.out.print(", ");
+                }
+        }
+        
+   
+    }else if (fromNum > toNum){
+        for (int i = fromNum; i >= toNum; i--){
+            System.out.print(i);
+            if (i != toNum){
+                System.out.print(", ");
+            }
+        }
+    }
+    System.out.println();
+}
 
 
 
    public boolean isPalindrome(String myString) {
+    String word1 = reverseString(myString);
+    if (word1.equals(myString)){
+        return true;
+    }else {
        return false;
    }
-
+   }
 
    public void multiPrint(String toPrint, int num) { //the tests will compare your printed output (not a returned string)
        System.out.println();
