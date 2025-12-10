@@ -144,8 +144,9 @@ public class StringLoops {
 
 
    public boolean isPalindrome(String myString) {
-    String word1 = reverseString(myString);
-    if (word1.equals(myString)){
+    String temp = myString.replace(" ", "");
+    String reversed = reverseString(temp);
+    if (reversed.equals(temp)){
         return true;
     }else {
        return false;
