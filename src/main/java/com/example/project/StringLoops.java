@@ -113,7 +113,14 @@ public class StringLoops {
    }
 
    public String removeString(String searchString, String origString) {
-    return origString.replace(searchString, "");
+    String result = origString;
+    
+    // Keep removing until no more instances are found
+    while (result.contains(searchString)) {
+        result = result.replace(searchString, "");
+    }
+    
+    return result;
    }
 
 
@@ -154,6 +161,17 @@ public class StringLoops {
    }
 
    public void multiPrint(String toPrint, int num) { //the tests will compare your printed output (not a returned string)
-       System.out.println();
+        System.out.print("[");
+    
+    if (num > 0) {
+        for (int i = 1; i <= num; i++) {
+            System.out.print(toPrint);
+            if (i != num) {  // Only print space if not the last one
+                System.out.print(" ");
+            }
+        }
+    }
+    
+    System.out.println("]");
    }
 }
